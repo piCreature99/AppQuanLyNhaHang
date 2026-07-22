@@ -1,0 +1,351 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="FormKho.cs" />
+    <Compile Remove="FormKho.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\admin\admin01.png" />
+    <None Remove="Images\admin\admin02.png" />
+    <None Remove="Images\admin\admin03.png" />
+    <None Remove="Images\admin\admin04.png" />
+    <None Remove="Images\admin\default.png" />
+    <None Remove="Images\BG\BG2.png" />
+    <None Remove="Images\BG\BGWine.png" />
+    <None Remove="Images\BG\BGWineBlur.png" />
+    <None Remove="Images\BG\mainBG.jpg" />
+    <None Remove="Images\Buttons\Storage\pbgiohang_normal.png" />
+    <None Remove="Images\Buttons\Storage\pbgiohang_selected.png" />
+    <None Remove="Images\Buttons\Storage\pbhoadon_alert.png" />
+    <None Remove="Images\Buttons\Storage\pbhoadon_normal.png" />
+    <None Remove="Images\Buttons\Storage\pbhoadon_selected.png" />
+    <None Remove="Images\Buttons\Storage\pbkho_normal.png" />
+    <None Remove="Images\Buttons\Storage\pbkho_selected.png" />
+    <None Remove="Images\Buttons\Storage\pbtaikhoan_normal.png" />
+    <None Remove="Images\Buttons\Storage\pbtaikhoan_selected.png" />
+    <None Remove="Images\Buttons\Storage\pbthucdon_normal.png" />
+    <None Remove="Images\Buttons\Storage\pbthucdon_selected.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\avatar_border.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\clear_btn.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\customer_forgot_password.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\customer_loggin.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\customer_register.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\data_grid_overlay.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\delete_btn.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\dgvBorder.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\drop_down.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\exit_btn.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\left_panel.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\manager_forgot_password.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\manager_login.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\notification_btn.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\right_panel.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\search_bar.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\search_container.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\settings_btn.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\shipper_loggin.png" />
+    <None Remove="Images\Buttons\Storage\SearchContainer\text_box.png" />
+    <None Remove="Images\client\client01.png" />
+    <None Remove="Images\client\client02.png" />
+    <None Remove="Images\client\client03.png" />
+    <None Remove="Images\client\default.png" />
+    <None Remove="Images\FoodItems\BunBoHueChanGio.png" />
+    <None Remove="Images\FoodItems\BunChaHaNoiTruyenThong.png" />
+    <None Remove="Images\FoodItems\BunDauMamTomGocPho.png" />
+    <None Remove="Images\FoodItems\BunDauTaLaLongDoi.png" />
+    <None Remove="Images\FoodItems\CaPheSuaDaSaiGon.png" />
+    <None Remove="Images\FoodItems\CaVienChienNuocMam.png" />
+    <None Remove="Images\FoodItems\CocaColaLonLanh.png" />
+    <None Remove="Images\FoodItems\ComBoLucLacKhoaiTay.png" />
+    <None Remove="Images\FoodItems\ComChienDuongChau.png" />
+    <None Remove="Images\FoodItems\ComGaXoiMoDaGion.png" />
+    <None Remove="Images\FoodItems\ComSuonDaoTamVi.png" />
+    <None Remove="Images\FoodItems\ComThitKhoTrungBacThao.png" />
+    <None Remove="Images\FoodItems\default.png" />
+    <None Remove="Images\FoodItems\KhoaiTayChienLacPhoMai.png" />
+    <None Remove="Images\FoodItems\MetAnVatTongHop.png" />
+    <None Remove="Images\FoodItems\MyGaTanThuocBac.png" />
+    <None Remove="Images\FoodItems\MyXaoBoCaiThia.png" />
+    <None Remove="Images\FoodItems\NemChuaRanHaNoi.png" />
+    <None Remove="Images\FoodItems\NuocSuoiAquafinaLanh.png" />
+    <None Remove="Images\FoodItems\PhoMaiQueGionRum%285cay%29.png" />
+    <None Remove="Images\FoodItems\TraChanhSaDaXay.png" />
+    <None Remove="Images\OtherImgs\CAPYBISTRO.png" />
+    <None Remove="Images\OtherImgs\CAPYCUSTOMER.png" />
+    <None Remove="Images\OtherImgs\CAPYDELIVERY.png" />
+    <None Remove="Images\OtherImgs\CAPYMANAGER.png" />
+    <None Remove="Images\OtherImgs\Nav.png" />
+    <None Remove="Images\shipper\default.png" />
+    <None Remove="Images\shipper\shipper01.png" />
+    <None Remove="Images\shipper\shipper02.png" />
+    <None Remove="Images\shipper\shipper03.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\admin\admin01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\admin\admin02.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\admin\admin03.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\admin\admin04.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\admin\default.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\BG\BG2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\BG\BGWine.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\BG\BGWineBlur.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\BG\mainBG.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\pbgiohang_normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\pbgiohang_selected.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\pbhoadon_alert.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\pbhoadon_normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\pbhoadon_selected.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\pbkho_normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\pbkho_selected.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\pbtaikhoan_normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\pbtaikhoan_selected.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\pbthucdon_normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\pbthucdon_selected.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\avatar_border.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\clear_btn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\customer_forgot_password.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\customer_loggin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\customer_register.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\data_grid_overlay.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\delete_btn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\dgvBorder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\drop_down.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\exit_btn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\left_panel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\manager_forgot_password.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\manager_login.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\notification_btn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\right_panel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\search_bar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\search_container.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\settings_btn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\shipper_loggin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Storage\SearchContainer\text_box.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\client\client01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\client\client02.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\client\client03.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\client\default.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\BunBoHueChanGio.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\BunChaHaNoiTruyenThong.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\BunDauMamTomGocPho.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\BunDauTaLaLongDoi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\CaPheSuaDaSaiGon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\CaVienChienNuocMam.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\CocaColaLonLanh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\ComBoLucLacKhoaiTay.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\ComChienDuongChau.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\ComGaXoiMoDaGion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\ComSuonDaoTamVi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\ComThitKhoTrungBacThao.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\default.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\KhoaiTayChienLacPhoMai.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\MetAnVatTongHop.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\MyGaTanThuocBac.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\MyXaoBoCaiThia.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\NemChuaRanHaNoi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\NuocSuoiAquafinaLanh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\PhoMaiQueGionRum(5cay).png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FoodItems\TraChanhSaDaXay.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\OtherImgs\CAPYBISTRO.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\OtherImgs\CAPYCUSTOMER.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\OtherImgs\CAPYDELIVERY.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\OtherImgs\CAPYMANAGER.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\OtherImgs\Nav.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\shipper\default.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\shipper\shipper01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\shipper\shipper02.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\shipper\shipper03.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.9" />
+    <PackageReference Include="Microsoft.SqlServer.Server" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Views\FormThucDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
