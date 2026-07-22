@@ -421,6 +421,7 @@
             dgvCongThuc.RowHeadersWidth = 51;
             dgvCongThuc.Size = new Size(298, 146);
             dgvCongThuc.TabIndex = 0;
+            dgvCongThuc.DataError += dgvCongThuc_DataError;
             // 
             // btnUpdate
             // 

@@ -65,6 +65,36 @@ namespace App_QuanLy.BLL
                 }
             }
 
+            // Kiểm tra định dạng và giá trị Số lượng trong dtCongThuc (nếu có dữ liệu)
+            if (dtCongThuc != null && dtCongThuc.Rows.Count > 0)
+            {
+                foreach (DataRow row in dtCongThuc.Rows)
+                {
+                    // Bỏ qua các dòng đã bị đánh dấu xóa trong DataTable (nếu có)
+                    if (row.RowState == DataRowState.Deleted) continue;
+
+                    object valueSoLuong = row["SoLuongHaoHut"];
+
+                    // Kiểm tra rỗng/null
+                    if (valueSoLuong == DBNull.Value || string.IsNullOrWhiteSpace(valueSoLuong.ToString()))
+                    {
+                        return "Số lượng nguyên liệu trong công thức không được để trống!";
+                    }
+
+                    // Kiểm tra xem có phải định dạng số hay không
+                    if (!decimal.TryParse(valueSoLuong.ToString(), out decimal soLuong))
+                    {
+                        return "Số lượng nguyên liệu phải là định dạng số hợp lệ!";
+                    }
+
+                    // Kiểm tra không âm (hoặc > 0 tùy nhu cầu của bạn)
+                    if (soLuong <= 0)
+                    {
+                        return "Số lượng nguyên liệu trong công thức phải lớn hơn 0!";
+                    }
+                }
+            }
+
             bool ketQua = _monAnDAL.ThemMonAnKemCongThuc(ma, dtCongThuc);
             return ketQua ? "Thành công" : "Có lỗi xảy ra khi thêm món ăn vào hệ thống!";
         }
@@ -115,6 +145,35 @@ namespace App_QuanLy.BLL
                 if (dtCongThuc == null || dtCongThuc.Rows.Count == 0)
                 {
                     return "Món ăn thuộc danh mục này bắt buộc phải cấu hình ít nhất 1 nguyên liệu!";
+                }
+            }
+
+            if (dtCongThuc != null && dtCongThuc.Rows.Count > 0)
+            {
+                foreach (DataRow row in dtCongThuc.Rows)
+                {
+                    // Bỏ qua các dòng đã bị đánh dấu xóa trong DataTable (nếu có)
+                    if (row.RowState == DataRowState.Deleted) continue;
+
+                    object valueSoLuong = row["SoLuongHaoHut"];
+
+                    // Kiểm tra rỗng/null
+                    if (valueSoLuong == DBNull.Value || string.IsNullOrWhiteSpace(valueSoLuong.ToString()))
+                    {
+                        return "Số lượng nguyên liệu trong công thức không được để trống!";
+                    }
+
+                    // Kiểm tra xem có phải định dạng số hay không
+                    if (!decimal.TryParse(valueSoLuong.ToString(), out decimal soLuong))
+                    {
+                        return "Số lượng nguyên liệu phải là định dạng số hợp lệ!";
+                    }
+
+                    // Kiểm tra không âm (hoặc > 0 tùy nhu cầu của bạn)
+                    if (soLuong <= 0)
+                    {
+                        return "Số lượng nguyên liệu trong công thức phải lớn hơn 0!";
+                    }
                 }
             }
 
